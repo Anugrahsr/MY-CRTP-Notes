@@ -290,7 +290,7 @@ Get-DomainGPO -Identity "GPO_NAME"
 where, % means :- ForEach-Object | $\_ means :- current Object
 
 ```
-(Get-DomainGPO -Identity StudentMachines).distinguishedname | %{Get-DomainComputer -SearchBase $_} | Select Name
+(Get-DomainOU -Identity StudentMachines).distinguishedname | %{Get-DomainComputer -SearchBase $_} | Select Name
 ```
 
 #### Get the ACLs associated with the specified object -
